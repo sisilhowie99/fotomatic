@@ -223,28 +223,38 @@ header .mobile {
 #features-section {
   display: flex;
   justify-content: space-between;
-  padding: 4rem 5%;
+  padding: 4rem 5% 2.875rem;
   background-color: #f3f3f3;
 }
 
 .feature {
+  max-height: 39.6875rem;
   flex: 1;
-  padding: 2rem;
-  margin: 0px 1.25rem;
+  padding: 2rem 2rem 2.5rem;
+  margin: 0px 1.1875rem;
   background-color: white;
 }
 
-.feature .image-container {
+.feature .content {
+  width: auto;
+  height: 11.6875rem;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-content: center;
+}
+
+.feature img {
   width: 90%;
   height: 65%;
   margin: 0 auto;
 }
 
 .feature h2 {
-  padding-bottom: .5rem;
   font-size: 2.25rem;
   font-weight: bold;
   color: #4a4a4a;
+  line-height: 1.2;
 }
 
 .feature h3 {
