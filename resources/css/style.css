@@ -81,7 +81,52 @@ header .mobile {
   display: none;
 }
 
-@media only screen and (max-width: 760px) {
+header .tablet {
+  display: none;
+}
+
+/* Tablet size */
+@media only screen and (min-width: 451px) and (max-width: 760px) {
+  header .content {
+    margin-right: 0;
+  }
+
+  header nav.desktop {
+    display: none;
+  }
+
+  header .logo {
+    width: 10%;
+    height: auto;
+    float: left;
+  }
+
+  header .tablet {
+    width: auto;
+    height: auto;
+    display: block;
+    float: right;
+    margin-left: 17%;
+    text-align: right;
+  }
+
+  header .tablet li {
+    padding: 10px;
+  }
+
+  header .tablet .button {
+    width: auto;
+    height: 100%;
+    padding: .1875rem .5rem;
+    background-color: #9dc20b;
+    line-height: 1.6;
+    color: white;
+    border-radius: 4px;
+  }
+}
+
+/* Mobile size */
+@media only screen and (max-width: 450px) {
   header .desktop {
     display: none;
   }
@@ -93,24 +138,28 @@ header .mobile {
 
   header .content {
     padding: .5rem 0;
+    height: 3rem;
   }
 
   header .mobile ul {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
   }
 
   header .mobile li {
+    margin: 0;
     padding: 0;
   }
 
   header .mobile .button {
+    display: block;
     padding: .1875rem .5rem;
     background-color: #9dc20b;
     line-height: 1.6;
     color: white;
+    border-radius: 4px;
   }
 }
 
@@ -127,7 +176,7 @@ header .mobile {
 }
 
 #sign-up-cta {
-  margin: 10.625rem 6.25rem 10.625rem;
+  margin: 10.625rem 0 10.625rem 6.25rem;
   padding: 2rem 5rem 3.5rem 5rem;
   border: 1px solid #979797;
   border-radius: 4px;
@@ -186,6 +235,8 @@ header .mobile {
     height: auto;
     background-color: transparent;
     border: none;
+    margin: 0;
+    padding: 0;
   }
 
   #sign-up-cta .content {
@@ -208,6 +259,11 @@ header .mobile {
 @media only screen and (max-width: 450px) {
   #sign-up-section {
     height: 20rem;
+  }
+
+  #sign-up-cta {
+    margin: 0;
+    padding: 0;
   }
 
   #sign-up-cta h1 {
@@ -265,7 +321,16 @@ header .mobile {
   color: #4a4a4a;
 }
 
-@media only screen and (max-width: 890px) {
+@media only screen and (max-width: 450px) {
+  #features-section {
+    flex-flow: column;
+    padding: 0;
+  }
+
+  .feature {
+    padding: 1rem auto 1.875rem auto;
+  }
+
   .feature h2 {
     font-size: 1.125rem;
     line-height: 1.3;
@@ -278,15 +343,21 @@ header .mobile {
   }
 }
 
-@media only screen and (max-width: 760px) {
+@media only screen and (min-width: 451px) and (max-width: 760px) {
   #features-section {
-    flex-flow: column;
-    padding: 0;
+    padding: 1.25rem 0;
   }
 
-  .feature {
-    margin: 0;
-    padding: 1.25rem 1rem 0 1rem;
+  .feature .content {
+    text-align: left;
+  }
+
+  .feature h2 {
+    font-size: 1.75rem;
+  }
+
+  .feature h3 {
+    font-size: 0.85rem;
   }
 }
 
@@ -305,6 +376,7 @@ header .mobile {
 #filters-section .content h2 {
   font-size: 2.25rem;
   font-weight: bold;
+  line-height: 1.2;
   color: white;
   opacity: 100%;
 }
@@ -330,20 +402,29 @@ header .mobile {
   height: auto;
 }
 
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 450px) {
+  #filters-section .content h2 {
+    font-size: 1.125rem;
+    font-weight: normal;
+  }
+
+  #filters-section .extra {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 451px) and (max-width: 760px) {
   #filters-section {
     padding: 1.5rem 0 0 0;
   }
 
   #filters-section .content {
-    margin-bottom: 1rem;
+    margin-top: 2.5rem;
   }
 
   #filters-section .content h2 {
-    padding-bottom: .625rem;
-    font-size: 1.125rem;
+    font-size: 2.25rem;
     line-height: 1.3;
-    font-weight: normal;
   }
 
   #filters-section .content h3 {
@@ -352,11 +433,8 @@ header .mobile {
   }
 
   #filters-section .images-container {
+    margin-top: 2.5rem;
     padding: 0;
-  }
-
-  #filters-section .extra {
-    display: none;
   }
 }
 
@@ -380,20 +458,29 @@ header .mobile {
   height: 1.875rem;
 }
 
-@media only screen and (max-width: 760px) {
-  #quotes-section content {
-    padding: 1.875rem .625rem;
+@media only screen and (min-width: 451px) and (max-width: 760px) {
+  #quotes-section {
+    padding: 2.5rem 1rem;
+    text-align: left;
   }
 
-  #quotes-section quote {
+  #quotes-section .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+  }
+
+  #quotes-section .quote {
+    width: 80%;
     font-size: 1.5rem;
     line-height: 1.4;
+    float: left;
   }
 
   #quotes-section .quote-citation {
-    display: block;
-    padding-top: 1rem;
-    margin: auto;
+    width: 20%;
+    float: right;
   }
 }
 
